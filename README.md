@@ -21,3 +21,10 @@ This Z-Score algorithm hypothesizes that when 2 stocks deviate too much away fro
 My first trading algorithm taught me alot about pulling data and coding using quantopian. Things I have learnt in this exercise include initializing a trade, defining parameters for the trade, in this case the Z-Score, recording any data we want of the trade (Z-Score), as well as determining the optimal z-score to open and close a trade, using historical data. 
 
 The flaws of this algorithm is that the 30 day Moving average Z-Score is still a lagging indicator, and may not be predictive of the future performance of the 2 stocks. We are still unable to accurately determine the support and resistance of the Z-Score to open a trade, and hence for now have to depend on the manual process of plotting the historical data, plotting the chart and observing the chart manually.
+
+Results (4 Years backtest from 7/4/2015 - 19/11/2019):
+Returns = -24.63%
+Beta = 0.10
+Sharpe = -0.52
+Drawdown = -42.71%
+From the chart, the algorithm works best in 2016 and started to give declining results from 2017 onwards, erasing profits from September 2017 onwards. It has the worst performance in 2018 and 2019.
