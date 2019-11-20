@@ -28,3 +28,15 @@ Beta = 0.10
 Sharpe = -0.52
 Drawdown = -42.71%
 From the chart, the algorithm works best in 2016 and started to give declining results from 2017 onwards, erasing profits from September 2017 onwards. It has the worst performance in 2018 and 2019.
+
+# TradingAlgo-Bollinger
+The bollinger band in this algorithm is set to 2 standard deviations away from a 20 day MA for the selected stock Johnson & Johnson. The algorithm purchases 100% of portfolio into the stock when the current price of the stock is below the lower bound, or shorts 100% of portfolio of the stock when the current price of the stock is above the upper bound.
+
+Just like the algorithm in TradingAlgo-Zscore, the bollinger algorithm is also a lagging indicator and is not indicative of future performance. Using a single indicator as trading strategy is insufficient to generate consistently profitable results.
+
+Results (5 Years backtest from 19/11/2014 - 10/11/2019):
+Returns = 19.6%
+Beta = 0
+Sharpe = 0.28
+Drawdown = -22.1%
+From the chart, the algorithm saw a sharp spike in returns at the end of 2015 and was on a gradual downhill ever since. This may be because there was no revision / close positions being formulated in the algorithm itself, hence the portfolio did not rebalance after a 100% buy in at the end of 2015. The performance of the portfolio hence followed the performance of the stock itself.
