@@ -51,4 +51,4 @@ Apart from sentdex sentiment analysis, there are other sentment analysis package
 Sentdex Sentiment: https://github.com/Sentdex/socialsentiment
 Vader Sentiment: https://github.com/cjhutto/vaderSentiment
 
-The next step in which I will need to do is to understand how bayes theorem works, hence naive bayes for machine learning, and then how I can implement a code to optimize sentiment analysis using naive bayes, or perhaps other better theories available out there, in my trading. Optimization of codes is the hard and tough part and will probably take awhile.
+The next step in which I will need to do is to understand how bayes theorem works, hence naive bayes for machine learning, and then how I can implement a code to optimize sentiment analysis using naive bayes, or perhaps other better theories available out there, in my trading. Optimization of codes is the hard and tough part and will probably take awhile. If anyone who is reading this has a good idea / suggestion on how I can do this optimally, please let me know.
