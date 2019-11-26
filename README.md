@@ -40,3 +40,15 @@ Beta = 0
 Sharpe = 0.28
 Drawdown = -22.1%
 From the chart, the algorithm saw a sharp spike in returns at the end of 2015 and was on a gradual downhill ever since. This may be because there was no revision / close positions being formulated in the algorithm itself, hence the portfolio did not rebalance after a 100% buy in at the end of 2015. The performance of the portfolio hence followed the performance of the stock itself.
+
+# SentdexSentiment
+Spent the past few days learning about sentiment analysis and how it can possibly be implemented into trading algorithms. Quantopian platform has a sentdex sentiment anlaysis package in its pipeline data which analyzes news from sources such as bloomberg, CNBC etc. which analyzes news sentiments and ranks them from a -3 to 6. The accuracy of this package is, I believe, about 80% or so today.
+
+This file is just a basic execution code for analyzing Q1500US stocks and determining its sentiment factor, before shorting stocks with <=-2 in sentiment factor and entering into a long for those with a sentiment factor of >=4. It is a very simple implementation of the code and will probably require much more in-depth optimization before implementing it to an actual trading algorithm. I am not too sure, but I believe that sentdex sentiment analysis is coded on the basis of naive bayes theorem.
+
+Apart from sentdex sentiment analysis, there are other sentment analysis packages available in the open source, as well as premium models today, for example VADER sentiment analysis which is primarily used for social media text recognition and sentiment analysis. The links to the two packages are attached below for reference.
+
+Sentdex Sentiment: https://github.com/Sentdex/socialsentiment
+Vader Sentiment: https://github.com/cjhutto/vaderSentiment
+
+The next step in which I will need to do is to understand how bayes theorem works, hence naive bayes for machine learning, and then how I can implement a code to optimize sentiment analysis using naive bayes, or perhaps other better theories available out there, in my trading. Optimization of codes is the hard and tough part and will probably take awhile.
