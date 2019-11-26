@@ -48,7 +48,8 @@ This file is just a basic execution code for analyzing Q1500US stocks and determ
 
 Apart from sentdex sentiment analysis, there are other sentment analysis packages available in the open source, as well as premium models today, for example VADER sentiment analysis which is primarily used for social media text recognition and sentiment analysis. The links to the two packages are attached below for reference.
 
-Sentdex Sentiment: https://github.com/Sentdex/socialsentiment
+Sentdex Social Sentiment: https://github.com/Sentdex/ | socialsentiment.net
+Sentdex market sentiment: http://sentdex.com/financial-analysis/?i=SP500&tf=7d
 Vader Sentiment: https://github.com/cjhutto/vaderSentiment
 
-The next step in which I will need to do is to understand how bayes theorem works, hence naive bayes for machine learning, and then how I can implement a code to optimize sentiment analysis using naive bayes, or perhaps other better theories available out there, in my trading. Optimization of codes is the hard and tough part and will probably take awhile. If anyone who is reading this has a good idea / suggestion on how I can do this optimally, please let me know.
+The Sentdex market sentiment is good enough for building the trading algorithm, hence there is no need to code sentiment analysis packages again. However, the next step is still to implement the sentdex sentiment class into a trading algorithm and optimize its trading results.
