@@ -65,7 +65,7 @@ Splash: Parses the data and stores it in a structured way e.g. css file
 
 This chapter required the understanding of geckodriver and linking webdriver from the selenium package to its correct path. When executing the autobot using selenium, the bot stopped jumping pages after the second, giving the following error:
 
-"ElementClickInterceptedException: Message Element <a class="pagination-link pagination-next" href="fake url"> is not clickable at point (1100,877) because another element <div id="loading_animation" class="loader"> obscures it"
+ElementClickInterceptedException: Message Element <a class="pagination-link pagination-next" href="fake url"> is not clickable at point (1100,877) because another element <div id="loading_animation" class="loader"> obscures it
   
 Upon investigation, there was a line in the code 'sleep(1)' that could not be defined at first, so I removed it. However, the time delay is necessary to allow the animation in the website (probably advertisements) to load, before the bot can skip pages. So, instead of using sleep(1), import time, and use time.sleep(1) instead. The bot will then be able to skip pages automatically.
 
