@@ -53,3 +53,20 @@ Sentdex market sentiment: http://sentdex.com/financial-analysis/?i=SP500&tf=7d
 Vader Sentiment: https://github.com/cjhutto/vaderSentiment
 
 The Sentdex market sentiment is good enough for building the trading algorithm, hence there is no need to code sentiment analysis packages again. However, the next step is still to implement the sentdex sentiment class into a trading algorithm and optimize its trading results.
+
+# opentabledata
+Diving into techincal books, I chanced on a very good book that teaches on how to do algorithmic trading using machine learning, written by Stefan Jansen. This file is a hands-on practice of chapter 3 of the book, where he teaches how to retrieve HTML data using requests, BeautifulSoup, Selenium, Scrapy and splash, building a dataset of restaurant bookings from the website https://www.opentable.com/. The key differences and uses are as follows:
+
+requests: pull data from website html
+BeautifulSoup: Parses pulled data after using requests. Unable to read JavaScript files
+Selenium: Enables automation of HTML data parsing, and creating a code that allows selenium to click 'Next' for us and parse data until the end. So it works like a bot.
+Scrapy: Crawls through the given website
+Splash: Parses the data and stores it in a structured way e.g. css file
+
+This chapter required the understanding of geckodriver and linking webdriver from the selenium package to its correct path. When executing the autobot using selenium, the bot stopped jumping pages after the second, giving the following error:
+
+'ElementClickInterceptedException: Message: Element <a class="pagination-link pagination-next" href="fake url"> is not clickable at point (1100,877) because another element <div id="loading_animation" class="loader"> obscures it'
+  
+Upon investigation, there was a line in the code 'sleep(1)' that could not be defined at first, so I removed it. However, the time delay is necessary to allow the animation in the website (probably advertisements) to load, before the bot can skip pages. So, instead of using sleep(1), import time, and use time.sleep(1) instead. The bot will then be able to skip pages automatically.
+
+Now that we know how to draw HTML data from websites and parse it using a bot, this will be useful in machine learning sentiment analysis which I can't wait to learn about in the upcoming chapters of the book.
