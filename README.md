@@ -63,10 +63,11 @@ Selenium: Enables automation of HTML data parsing, and creating a code that allo
 Scrapy: Crawls through the given website
 Splash: Parses the data and stores it in a structured way e.g. css file
 
-This chapter required the understanding of geckodriver and linking webdriver from the selenium package to its correct path. When executing the autobot using selenium, the bot stopped jumping pages after the second, giving the following error:
-
-ElementClickInterceptedException: Message Element <a class="pagination-link pagination-next" href="fake url"> is not clickable at point (1100,877) because another element <div id="loading_animation" class="loader"> obscures it
-  
-Upon investigation, there was a line in the code 'sleep(1)' that could not be defined at first, so I removed it. However, the time delay is necessary to allow the animation in the website (probably advertisements) to load, before the bot can skip pages. So, instead of using sleep(1), import time, and use time.sleep(1) instead. The bot will then be able to skip pages automatically.
+This chapter required the understanding of geckodriver and linking webdriver from the selenium package to its correct path. When executing the autobot using selenium, the bot stopped jumping pages after the second, giving an ElementClickInterceptedException error. Upon investigation, there was a line in the code 'sleep(1)' that could not be defined at first, so I removed it. However, the time delay is necessary to allow the animation in the website (probably advertisements) to load, before the bot can skip pages. So, instead of using sleep(1), import time, and use time.sleep(1) instead. The bot will then be able to skip pages automatically.
 
 Now that we know how to draw HTML data from websites and parse it using a bot, this will be useful in machine learning sentiment analysis which I can't wait to learn about in the upcoming chapters of the book.
+
+# EarningsCall
+Chapter 3 of Stefan Jansen's book teaches how to retrieve earnings call transcripts of companies from seekingalpha.com, creating a bot that parses through the strings to retrieve specific data such as company name, participants of the selected earnings call transcripts. We then store the data in a CSV file for use in machine learning or analysis in future. 
+
+While coding, I came across error messages such as NoneType error for BeautifulSoup.find. Upon investigation, some of the earnings call transcripts may not exactly contain certain contents we are looking for and hence hinders the bot from continuing to retrieve data. Hence, there is a need to extend the code by adding an if none call, to command the bot to continue running through the code if there is no data.
