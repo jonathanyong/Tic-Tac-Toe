@@ -104,6 +104,6 @@ while next_page:
                 meta, participants, content = result
                 meta['link'] = link
                 store_result(meta, participants, content)
-            sleep(5 + (random() - .5) * 2)
+            sleep(2)
 
 driver.close()
