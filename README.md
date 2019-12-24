@@ -82,3 +82,5 @@ Chapter 2 of Stefan Jansen's book teaches how to store data into a HDF5 format a
 However, using HDF5 files require special programs such as Java, Python, C++ etc. Only programmers with special training in such languages will be able to use the data stored in these files.
 
 This file shows how historical price data of 3000 US companies from before 27 March 2018 is retrieved from Quandl, then parsed and stored into the HDF5 file 'assets.h5', with columns 'date', 'ticker', 'adj_close', 'split_ratio', 'ex-dividend'. While attempting to learn about storing files into HDF5, the key difficulty i faced was recognizing my Path. In this file, I have added a code that allows you to recognize where your path is.
+
+Storing data into HDF5 format is especially important as when we progress further with our analysis, data may become too big to be stored in a CSV format, and too large for efficient and high speed reading. When it comes to algorithmic trading, time is an essential factor as HFTs compete mainly via this factor.
