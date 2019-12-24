@@ -73,3 +73,12 @@ Chapter 3 of Stefan Jansen's book teaches how to retrieve earnings call transcri
 While coding, I came across error messages such as NoneType error for BeautifulSoup.find. Upon investigation, some of the earnings call transcripts may not exactly contain certain contents we are looking for and hence hinders the bot from continuing to retrieve data. Hence, there is a need to extend the code by adding an if none call, to command the bot to continue running through the code if there is no data. The updated code can be found on Stefan's repository at this link: https://github.com/PacktPublishing/Hands-On-Machine-Learning-for-Algorithmic-Trading/blob/master/Chapter03/02_earnings_calls/sa_selenium.py
 
 Being able to sieve out important data and storing them into CSV format is the first step to creating our machine learning model which I will be diving to subsequently.
+
+# HDF5Format
+Chapter 2 of Stefan Jansen's book teaches how to store data into a HDF5 format after retrieving the data and parsing through it. The benefits of storing data into a HDF5 format includes:
+1) Storing data into HDF5 format allows for access time and storage space optimizations. 
+2) The HDF5 is a versatile data model that represents very complex data objects and a wide range of metadata
+3) The file is completely portable with no limit on data size or objects
+However, using HDF5 files require special programs such as Java, Python, C++ etc. Only programmers with special training in such languages will be able to use the data stored in these files.
+
+This file shows how historical price data of 3000 US companies from before 27 March 2018 is retrieved from Quandl, then parsed and stored into the HDF5 file 'assets.h5', with columns 'date', 'ticker', 'adj_close', 'split_ratio', 'ex-dividend'. While attempting to learn about storing files into HDF5, the key difficulty i faced was recognizing my Path. In this file, I have added a code that allows you to recognize where your path is.
